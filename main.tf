@@ -23,13 +23,13 @@ variable "resource_group" {
 
 variable "location" {
   type = string
-  default = "northeurope"
+  default = "westeurope"
 }
  
 
 resource "azurerm_cosmosdb_account" "db" {
   name                = "ine-cosmos-db-data-${random_id.randomId.dec}"
-  location            = "northeurope"
+  location            = "westeurope"
   resource_group_name = var.resource_group
   offer_type          = "Standard"
   kind                = "GlobalDocumentDB"
@@ -45,7 +45,7 @@ resource "azurerm_cosmosdb_account" "db" {
   }
 
   geo_location {
-    location          = "northeurope"
+    location          = "westeurope"
     failover_priority = 0
   }
 }
