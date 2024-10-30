@@ -18,7 +18,7 @@ provider "azurerm" {
 
 
 variable "resource_group" {
-  default = "azuregoat_app"
+  default = "azgoat_app"
 }
 
 variable "location" {
